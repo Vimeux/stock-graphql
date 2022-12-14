@@ -43,10 +43,10 @@ module.exports = {
     }
   },
 
-  createProduct: async ({ id, quantity, name }) => {
+  createProduct: async ({ code, quantity, name }) => {
     try {
       // create product
-      const openFoodApi = `https://world.openfoodfacts.org/api/v2/search?fields=id,code,product_name&code=${id}`
+      const openFoodApi = `https://world.openfoodfacts.org/api/v2/search?fields=id,code,product_name&code=${code}`
       const product = 'http://127.0.0.1:5000/products/create'
 
       const openFoodRes = await fetch(openFoodApi)

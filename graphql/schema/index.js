@@ -22,7 +22,7 @@ module.exports = buildSchema(`
   }
 
   type Mutation {
-    createProduct(id: ID!, quantity: Int!, name: String): Product
+    createProduct(code: ID!, quantity: Int!, name: String): Product
     updateProduct(id: ID!, quantity: Int!): Product
     deleteProduct(id: ID!): Product
   }
